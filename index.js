@@ -6,7 +6,9 @@ website
   .use(
     postcss({
       plugins: {
-        autoprefixer: {},
+        'postcss-cssnext': {
+          warnForDuplicates: false
+        },
         cssnano: {},
       }
     })
