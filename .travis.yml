@@ -1,0 +1,14 @@
+language: node_js
+install:
+  - make node_modules
+script:
+  - make build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
+  local_dir: ${TRAVIS_BUILD_DIR}/build
+  repo: ninodorsi/ninodorsi.github.io
+  target_branch: master
