@@ -20,7 +20,8 @@ module.exports = Metalsmith(__dirname)
     contacts: {
       phone: "+32 484604013",
       email: "ninodorsi@gmail.com"
-    }
+    },
+    assetsVersion: 20171231
   })
   .source("./src")
   .destination("./build")
@@ -30,7 +31,7 @@ module.exports = Metalsmith(__dirname)
       posts: {
         pattern: "posts/*.md",
         sortBy: "date",
-        reverse: true,
+        reverse: true
       }
     })
   )
